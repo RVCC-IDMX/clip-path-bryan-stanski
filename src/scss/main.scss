@@ -1,4 +1,46 @@
 /* main */
-@use "./base/reset";
+@use './base/reset';
 @use './base/typography' as type;
-@use "./pages/home";
+@use './pages/home';
+
+body {
+  background: #dcf5ff;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-family: 'Nunito', 'sans-serif';
+}
+
+.container {
+  width: 40%;
+  background: white;
+  border-radius: 10px;
+
+  .inner {
+    background: rgb(7, 218, 165);
+    font-size: 1.75rem;
+    padding: 2em;
+    border-radius: 10px;
+    width: calc(100%);
+    clip-path: inset(0% 0% 0% 100%);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
+    h1 {
+      color: white;
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    p {
+      color: white;
+      font-size: 2rem;
+      font-weight: 100;
+    }
+  }
+  &:hover .inner {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
